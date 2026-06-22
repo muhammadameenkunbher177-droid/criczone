@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CricZone - Live Scores, Records & Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        header {
+            background-color: #006643;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .section-title {
+            color: #006643;
+            border-bottom: 2px solid #006643;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .score-text { font-size: 24px; font-weight: bold; color: #2c3e50; }
+        
+        .match-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .match-teams { font-weight: bold; }
+        .match-result { color: #27ae60; font-size: 14px; }
+
+        .ad-box {
+            background: #ebebeb;
+            border: 1px dashed #aaa;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .options-btn {
+            display: block;
+            width: 100%;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+        }
+        .options-btn:hover { background: #006643; color: white; }
+    </style>
+</head>
+<body>
+
+    <header>🏏 CricZone: Live Score, History & Quiz</header>
+
+    <div class="container">
+        
+        <!-- 1. LIVE MATCH SECTION -->
+        <div class="card" style="border-top: 5px solid #e74c3c;">
+            <h2 class="section-title">🔴 LIVE MATCH</h2>
+            <div class="score-text">Pakistan vs Sri Lanka</div>
+            <p>PAK: 165/4 (18.2 Overs) — <span style="color: #e67e22; font-weight: bold;">PAK needs 22 runs in 10 balls</span></p>
+        </div>
+
+        <!-- AD PLACEHOLDER 1 -->
+        <div class="ad-box">
+            [Adsterra / Google AdSense Banner Ad Code Yahan Paste Karein]
+        </div>
+
+        <!-- 2. PURANE MATCHES (RECENT RESULTS) -->
+        <div class="card">
+            <h2 class="section-title">📅 Recent Matches (Purane Matches)</h2>
+            
+            <div class="match-row">
+                <span class="match-teams">Pakistan vs India (T20)</span>
+                <span class="match-result">Pakistan won by 5 wickets 🎉</span>
+            </div>
+            
+            <div class="match-row">
+                <span class="match-teams">Australia vs England (ODI)</span>
+                <span class="match-result">Australia won by 32 runs</span>
+            </div>
+
+            <div class="match-row">
+                <span class="match-teams">Pakistan vs New Zealand (T20)</span>
+                <span class="match-result">New Zealand won by 7 runs</span>
+            </div>
+        </div>
+
+        <!-- AD PLACEHOLDER 2 -->
+        <div class="ad-box">
+            [Doosra Ad Code Yahan Paste Karein — Zyada Ads = Zyada Kamai]
+        </div>
+
+        <!-- 3. QUIZ SECTION -->
+        <div class="card">
+            <h2 class="section-title">🧠 Daily Cricket Quiz</h2>
+            <div id="quiz-box">
+                <p id="question" style="font-size: 18px; font-weight: bold;">Loading...</p>
+                <div id="options"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const questions = [
+            { q: "Babar Azam ka shirt number kya hai?", o: ["56", "10", "33", "7"], a: 0 },
+            { q: "Pakistan ne kis saal ICC T20 World Cup jeeta tha?", o: ["2007", "2009", "2011", "2022"], a: 1 }
+        ];
+        let currentQ = 0;
+
+        function showQuestion() {
+            if(currentQ < questions.length) {
+                document.getElementById("question").innerText = questions[currentQ].q;
+                const optDiv = document.getElementById("options");
+                optDiv.innerHTML = "";
+                questions[currentQ].o.forEach((opt, i) => {
+                    optDiv.innerHTML += `<button class="options-btn" onclick="checkAnsw(${i})">${opt}</button>`;
+                });
+            } else {
+                document.getElementById("quiz-box").innerHTML = "<p style='color:green; font-weight:bold; text-align:center;'>Shukriya! Aaj ka quiz poora hua. Kal naye sawal aayenge! 🎉</p>";
+            }
+        }
+
+        function checkAnsw(idx) {
+            if(idx === questions[currentQ].a) { alert("Sahi Jawab! 🌟"); } 
+            else { alert("Ghalat Jawab! Koshish karte rahein."); }
+            currentQ++;
+            showQuestion();
+        }
+        showQuestion();
+    </script>
+</body>
+</html>
