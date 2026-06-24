@@ -3,164 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CricZone - Live Scores, Records & Quiz</title>
+    <title>CricZone Hub</title>
+    <!-- Google AdSense Verification Code (FIXED ID) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2985708184303816" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-        header {
-            background-color: #006643;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 15px;
-        }
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-        .section-title {
-            color: #006643;
-            border-bottom: 2px solid #006643;
-            padding-bottom: 5px;
-            margin-top: 0;
-        }
-        .score-text { font-size: 24px; font-weight: bold; color: #2c3e50; }
-        .match-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .match-teams { font-weight: bold; }
-        .match-result { color: #27ae60; font-size: 14px; }
-        .ad-box {
-            background: #ebebeb;
-            border: 1px dashed #aaa;
-            padding: 15px;
-            text-align: center;
-            font-size: 14px;
-            color: #666;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        .options-btn {
-            display: block;
-            width: 100%;
-            background: #f0f0f0;
-            border: 1px solid #ddd;
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: left;
-            font-size: 16px;
-        }
-        .options-btn:hover { background: #006643; color: white; }
-    </style>
 </head>
-<body>
+<body style="background-color: #1a1a1a; color: white; font-family: sans-serif; text-align: center; padding: 20px;">
 
-<header>🏏 CricZone: Live Score, History & Quiz</header>
+    <h1>Welcome to CricZone Hub</h1>
+    <p>Visit our main cricket site: <a href="https://muhammadameenkunbher177-droid.github.io/criczone/" style="color: #00ffcc;">Click Here to Go to CricZone</a></p>
 
-<div class="container">
-
-    <!-- 1. LIVE MATCH SECTION -->
-    <div class="card" style="border-top: 5px solid #e74c3c;">
-        <h2 class="section-title">🔴 LIVE MATCH</h2>
-        <div class="match-teams">Pakistan vs Sri Lanka</div>
-        <p class="score-text">PAK: 165/4 (18.2 Overs) – <span style="color: #e67e22; font-weight: bold;">PAK needs 22 runs in 10 balls</span></p>
+    <!-- LIVE SCORE CARD -->
+    <div id="live-cricket-card" style="background: #111; color: #fff; padding: 20px; border-radius: 10px; text-align: center; max-width: 400px; margin: 30px auto; border: 1px solid #333;">
+        <h3 id="match-title">Loading Match...</h3>
+        <h1 id="match-score" style="color: #00ffcc; margin: 10px 0;">-- / --</h1>
+        <p id="match-status" style="font-style: italic; color: #aaa;">Please wait, fetching live updates...</p>
     </div>
 
-    <!-- AD PLACEHOLDER 1 -->
-    <div class="card">
-        <div class="ad-box">
-            [Adsterra / Google AdSense Banner Ad Code Yahan Paste Karein]
-        </div>
-    </div>
-
-    <!-- 2. PURANE MATCHES (RECENT RESULTS) -->
-    <div class="card">
-        <h2 class="section-title">📅 Recent Matches (Purane Matches)</h2>
+    <!-- UPCOMING ODI WORLD CUP SCHEDULE SECTION -->
+    <div style="margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto; background: #111; padding: 20px; border-radius: 10px; border: 1px solid #333;">
+        <h2 style="color: #ffcc00; margin-top: 0;">🏆 Men's ODI World Cup 2027 Schedule</h2>
+        <p style="color: #aaa; font-size: 14px;">Expected Big Matches Schedule (South Africa, Zimbabwe & Namibia)</p>
         
-        <div class="match-row">
-            <span class="match-teams">Pakistan vs India (T20)</span>
-            <span class="match-result">Pakistan won by 5 wickets 🇵🇰</span>
-        </div>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left;">
+            <thead>
+                <tr style="background: #222; color: #00ffcc; border-bottom: 2px solid #333;">
+                    <th style="padding: 10px;">Match</th>
+                    <th style="padding: 10px;">Venue</th>
+                    <th style="padding: 10px;">Expected Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 10px; font-weight: bold;">South Africa vs Pakistan</td>
+                    <td style="padding: 10px; color: #aaa;">Johannesburg</td>
+                    <td style="padding: 10px; color: #00ffcc;">October 2027</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 10px; font-weight: bold; color: #ff3366;">Pakistan vs India (Big Clash)</td>
+                    <td style="padding: 10px; color: #aaa;">Cape Town</td>
+                    <td style="padding: 10px; color: #00ffcc;">October 2027</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 10px; font-weight: bold;">Australia vs England</td>
+                    <td style="padding: 10px; color: #aaa;">Durban</td>
+                    <td style="padding: 10px; color: #00ffcc;">November 2027</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #222;">
+                    <td style="padding: 10px; font-weight: bold;">India vs New Zealand</td>
+                    <td style="padding: 10px; color: #aaa;">Centurion</td>
+                    <td style="padding: 10px; color: #00ffcc;">November 2027</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; font-weight: bold; color: #ffcc00;">ODI World Cup 2027 FINAL</td>
+                    <td style="padding: 10px; color: #aaa;">Johannesburg</td>
+                    <td style="padding: 10px; color: #ffcc00;">November 2027</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- CRICKET ARCHIVE SECTION (2023 - PRESENT) -->
+    <div style="margin-top: 50px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: #00ffcc; border-bottom: 2px solid #333; display: inline-block; padding-bottom: 10px;">Cricket Match Archive (2023 - Present)</h2>
         
-        <div class="match-row">
-            <span class="match-teams">Australia vs England (ODI)</span>
-            <span class="match-result">Australia won by 32 runs</span>
+        <!-- Category Filter Buttons -->
+        <div style="margin: 20px 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <button onclick="filterVideos('all')" style="background: #00ffcc; color: black; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">All Matches</button>
+            <button onclick="filterVideos('recent')" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">Recent (2025-2026)</button>
+            <button onclick="filterVideos('2024')" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">2024 Season</button>
+            <button onclick="filterVideos('2023')" style="background: #333; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">2023 World Cup</button>
         </div>
-        
-        <div class="match-row">
-            <span class="match-teams">Pakistan vs New Zealand (T20)</span>
-            <span class="match-result">New Zealand won by 7 runs</span>
+
+        <!-- Video Grid -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+            
+            <!-- Video 1: Recent Match -->
+            <div class="video-card recent" style="background: #111; padding: 15px; border-radius: 8px; border: 1px solid #333; max-width: 260px; flex: 1 1 250px;">
+                <span style="background: #00ffcc; color: black; font-size: 12px; padding: 3px 8px; border-radius: 3px; font-weight: bold;">WOMEN'S T20 WC</span>
+                <h4 style="margin: 10px 0;">Aus v Pak (Recent)</h4>
+                <iframe width="100%" height="150" src="https://www.youtube.com/embed/2Ee9v1-V7Ko" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video 2: 2024 Match -->
+            <div class="video-card 2024" style="background: #111; padding: 15px; border-radius: 8px; border: 1px solid #333; max-width: 260px; flex: 1 1 250px;">
+                <span style="background: #ff3366; color: white; font-size: 12px; padding: 3px 8px; border-radius: 3px; font-weight: bold;">MEN'S T20 WC 2024</span>
+                <h4 style="margin: 10px 0;">Pak vs Ind Thriller</h4>
+                <iframe width="100%" height="150" src="https://www.youtube.com/embed/fSreZp8j1_M" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video 3: 2023 Match -->
+            <div class="video-card 2023" style="background: #111; padding: 15px; border-radius: 8px; border: 1px solid #333; max-width: 260px; flex: 1 1 250px;">
+                <span style="background: #ffcc00; color: black; font-size: 12px; padding: 3px 8px; border-radius: 3px; font-weight: bold;">ODI WORLD CUP 2023</span>
+                <h4 style="margin: 10px 0;">Pak vs SL Record Chase</h4>
+                <iframe width="100%" height="150" src="https://www.youtube.com/embed/gU9G6R8pS3w" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video 4: Recent Match 2 -->
+            <div class="video-card recent" style="background: #111; padding: 15px; border-radius: 8px; border: 1px solid #333; max-width: 260px; flex: 1 1 250px;">
+                <span style="background: #00ffcc; color: black; font-size: 12px; padding: 3px 8px; border-radius: 3px; font-weight: bold;">WOMEN'S T20 WC</span>
+                <h4 style="margin: 10px 0;">SA v Ind (Recent)</h4>
+                <iframe width="100%" height="150" src="https://www.youtube.com/embed/C9oQ3cickgc" frameborder="0" allowfullscreen></iframe>
+            </div>
+
         </div>
     </div>
 
-    <!-- AD PLACEHOLDER 2 -->
-    <div class="card">
-        <div class="ad-box">
-            [Doosra Ad Code Yahan Paste Karein – Zyada Ads = Zyada Kamai]
-        </div>
-    </div>
-
-    <!-- 3. QUIZ SECTION -->
-    <div class="card">
-        <h2 class="section-title">🧠 Daily Cricket Quiz</h2>
-        <div id="quiz-box">
-            <p id="question" style="font-size: 18px; font-weight: bold;">Loading...</p>
-            <div id="options"></div>
-        </div>
-    </div>
-
-</div>
-
-<script>
-    const questions = [
-        { q: "Babar Azam ka shirt number kya hai?", o: ["56", "10", "33", "7"], a: 0 },
-        { q: "Pakistan ne kis saal ICC T20 World Cup jeeta tha?", o: ["2007", "2009", "2011", "2022"], a: 1 }
-    ];
-
-    let currentQ = 0;
-
-    function showQuestion() {
-        if(currentQ < questions.length) {
-            document.getElementById("question").innerText = questions[currentQ].q;
-            const optDiv = document.getElementById("options");
-            optDiv.innerHTML = "";
-            questions[currentQ].o.forEach((opt, i) => {
-                optDiv.innerHTML += `<button class="options-btn" onclick="checkAnsw(${i})">${opt}</button>`;
-            });
-        } else {
-            document.getElementById("quiz-box").innerHTML = "<p style='color:green; font-weight:bold; text-align:center;'>Shukriya! Aaj ka quiz poora hua. Kal naye sawal aayenge! 🎉</p>";
+    <!-- JAVASCRIPT FOR FILTER & LIVE SCORE -->
+    <script>
+    function filterVideos(category) {
+        const cards = document.getElementsByClassName('video-card');
+        for (let card of cards) {
+            if (category === 'all') {
+                card.style.display = 'block';
+            } else {
+                if (card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
         }
     }
 
-    function checkAnsw(idx) {
-        if(idx === questions[currentQ].a) { alert("Sahi Jawab! 🥳"); }
-        else { alert("Ghalat Jawab! Koshish karte rahein."); }
-        currentQ++;
-        showQuestion();
+    async function fetchLiveScore() {
+        const url = 'https://free-cricbuzz-cricket-api.p.rapidapi.com/cricket-livescores';
+        const options = {
+            method: 'GET',
+            headers: {
+                'x-rapidapi-key': '231f3d8023mshbb446d916dea655p174f77jsn9570852ce6a0',
+                'x-rapidapi-host': 'free-cricbuzz-cricket-api.p.rapidapi.com'
+            }
+        };
+
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            
+            if (result && result.data && result.data.length > 0) {
+                const firstMatch = result.data[0];
+                document.getElementById('match-title').innerText = firstMatch.title || "Live Match";
+                document.getElementById('match-score').innerText = firstMatch.score || "No score available";
+                document.getElementById('match-status').innerText = firstMatch.status || "Match in progress";
+            } else {
+                document.getElementById('match-status').innerText = "Abhi koi live match nahi chal raha.";
+            }
+        } catch (error) {
+            console.error(error);
+            document.getElementById('match-status').innerText = "Score update karne mein error aaya.";
+        }
     }
 
-    showQuestion();
-</script>
+    fetchLiveScore();
+    setInterval(fetchLiveScore, 30000);
+    </script>
 
 </body>
 </html>
